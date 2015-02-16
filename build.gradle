@@ -1,6 +1,7 @@
 apply plugin: 'java'
+apply plugin: 'groovy'
 
-sourceCompatibility = 1.5
+sourceCompatibility = 1.8
 version = '1.0'
 
 repositories {
@@ -9,4 +10,10 @@ repositories {
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.11'
+    testCompile 'org.spockframework:spock-core:0.6-groovy-1.8-rc-1'
+    testCompile 'cglib:cglib-nodep:2.2'
+    compile 'org.projectlombok:lombok:1.14.8'
+    compile 'com.google.guava:guava:18.0'
+    compile 'org.apache.commons:commons-lang3:3.3.1'
+    compile 'commons-validator:commons-validator:1.4.0'
 }
