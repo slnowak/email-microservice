@@ -13,14 +13,14 @@ import org.apache.commons.validator.routines.EmailValidator;
 @Getter
 @Accessors(fluent = true)
 @EqualsAndHashCode
-public class Email {
+public class EmailAddress {
 
     private static final String VALIDATION_MESSAGE = "Invalid email string!";
 
     private final String username;
     private final String domain;
 
-    private Email(String emailString) {
+    private EmailAddress(String emailString) {
         Preconditions.checkArgument(isValid(emailString), VALIDATION_MESSAGE);
 
         final String[] emailTokens = emailString.split("@");
@@ -28,8 +28,8 @@ public class Email {
         this.domain = emailTokens[1];
     }
 
-    public static Email of(String emailString) {
-        return new Email(emailString);
+    public static EmailAddress of(String emailString) {
+        return new EmailAddress(emailString);
     }
 
     private boolean isValid(String emailString) {

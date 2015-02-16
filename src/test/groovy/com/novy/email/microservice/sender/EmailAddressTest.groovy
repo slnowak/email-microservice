@@ -1,17 +1,17 @@
-package com.novy.email.microservices.sender
+package com.novy.email.microservice.sender
 
-import com.novy.email.microservice.sender.Email
+import com.novy.email.microservice.sender.EmailAddress
 import spock.lang.Specification
 
 /**
  * Created by novy on 16.02.15.
  */
-class EmailTest extends Specification {
+class EmailAddressTest extends Specification {
 
     def "should not be able to create invalid email"() {
 
         when:
-        Email.of(emailString)
+        EmailAddress.of(emailString)
 
         then:
         thrown(IllegalArgumentException.class)
@@ -34,7 +34,7 @@ class EmailTest extends Specification {
         def validEmailAddress = "validEmailAddresss@gmail.com"
 
         when:
-        def email = Email.of(validEmailAddress)
+        def email = EmailAddress.of(validEmailAddress)
 
         then:
         email.emailString() == validEmailAddress
@@ -46,7 +46,7 @@ class EmailTest extends Specification {
         def validEmailAddress = "username@gmail.com"
 
         when:
-        def email = Email.of(validEmailAddress)
+        def email = EmailAddress.of(validEmailAddress)
 
         then:
         email.username() == "username"
