@@ -14,7 +14,7 @@ class MimeMessageFactoryTest extends Specification {
     def "should create proper MimeMessage from given Message"() {
 
         given:
-        def session = Session.getDefaultInstance(new Properties())
+        def session = unnecessarySession()
 
         def message = MessageBuilder
                 .newMessage()
@@ -30,6 +30,10 @@ class MimeMessageFactoryTest extends Specification {
         extractSender(mimeMessage) == message.sender()
         extractRecipientFrom(mimeMessage) == message.recipient()
 
+    }
+
+    private Session unnecessarySession() {
+        Session.getDefaultInstance(new Properties())
     }
 
     private String extractRecipientFrom(MimeMessage mimeMessage) {
