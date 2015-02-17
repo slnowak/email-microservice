@@ -10,7 +10,7 @@ import javax.mail.internet.MimeMessage;
  */
 public class MimeMessageFactory {
 
-    public static MimeMessage fromMessage(Message message, Session session) throws MessagingException {
+    public MimeMessage fromMessage(Message message, Session session) throws MessagingException {
         MimeMessage mimeMessage = new MimeMessage(session);
 
         mimeMessage.addFrom(

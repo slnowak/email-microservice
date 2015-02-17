@@ -11,6 +11,8 @@ import javax.mail.internet.MimeMessage
  */
 class MimeMessageFactoryTest extends Specification {
 
+    private final MimeMessageFactory objectUnderTest = new MimeMessageFactory()
+
     def "should create proper MimeMessage from given Message"() {
 
         given:
@@ -21,7 +23,7 @@ class MimeMessageFactoryTest extends Specification {
                 .build()
 
         when:
-        def mimeMessage = MimeMessageFactory.fromMessage(
+        def mimeMessage = objectUnderTest.fromMessage(
                 message, session
         )
 
