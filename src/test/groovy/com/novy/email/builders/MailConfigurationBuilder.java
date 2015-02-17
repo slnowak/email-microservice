@@ -1,7 +1,7 @@
 package com.novy.email.builders;
 
-import com.novy.email.microservice.sender.EmailAddress;
-import com.novy.email.microservice.sender.MailConfiguration;
+import com.novy.email.microservice.sender.message.EmailAddress;
+import com.novy.email.microservice.sender.configuration.MailConfiguration;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;

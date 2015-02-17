@@ -1,4 +1,4 @@
-package com.novy.email.microservice.sender
+package com.novy.email.microservice.sender.factories
 
 import com.novy.email.builders.MessageBuilder
 import com.novy.email.microservice.sender.factories.EmailFactory

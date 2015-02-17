@@ -2,8 +2,8 @@ package com.novy.email.microservice.sender.service
 
 import com.novy.email.builders.MailConfigurationBuilder
 import com.novy.email.builders.MessageBuilder
-import com.novy.email.microservice.sender.MailConfiguration
-import com.novy.email.microservice.sender.Message
+import com.novy.email.microservice.sender.configuration.MailConfiguration
+import com.novy.email.microservice.sender.message.Message
 import com.novy.email.microservice.sender.Sender
 import com.novy.email.microservice.sender.factories.EmailFactory
 import com.novy.email.microservice.sender.factories.MailerFactory

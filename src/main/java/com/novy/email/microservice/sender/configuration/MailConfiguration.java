@@ -1,4 +1,6 @@
-package com.novy.email.microservice.sender;
+package com.novy.email.microservice.sender.configuration;
+
+import com.novy.email.microservice.sender.message.EmailAddress;
 
 /**
  * Created by novy on 17.02.15.

@@ -1,4 +1,4 @@
-package com.novy.email.microservice.sender;
+package com.novy.email.microservice.sender.message;
 
 
 import com.google.common.base.Preconditions;

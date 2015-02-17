@@ -1,4 +1,4 @@
-package com.novy.email.microservice.sender;
+package com.novy.email.microservice.sender.configuration;
 
 /**
  * Created by novy on 17.02.15.

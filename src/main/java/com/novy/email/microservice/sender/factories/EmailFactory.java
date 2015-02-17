@@ -1,6 +1,6 @@
 package com.novy.email.microservice.sender.factories;
 
-import com.novy.email.microservice.sender.Message;
+import com.novy.email.microservice.sender.message.Message;
 import org.codemonkey.simplejavamail.Email;
 
 /**
