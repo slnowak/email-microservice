@@ -6,7 +6,7 @@ package com.novy.email.microservice.sender;
 public interface DomainConfiguration {
 
     String host();
-    String port();
-    String auth();
+
+    Integer tlsPort();
 
 }

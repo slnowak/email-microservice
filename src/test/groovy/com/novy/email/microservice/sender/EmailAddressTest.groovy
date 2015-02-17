@@ -1,6 +1,5 @@
 package com.novy.email.microservice.sender
 
-import com.novy.email.microservice.sender.EmailAddress
 import spock.lang.Specification
 
 /**

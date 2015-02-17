@@ -11,23 +11,19 @@ import java.util.Map;
 public enum SupportedDomains implements DomainConfiguration {
 
     GMAIL {
-
         @Override
         public String host() {
             return "smtp.gmail.com";
         }
-        @Override
-        public String port() {
-            return "587";
-        }
 
         @Override
-        public String auth() {
-            return "true";
+        public Integer tlsPort() {
+            return 587;
         }
     };
 
     private static final Map<String, SupportedDomains> mapping;
+
     static {
         mapping = ImmutableMap.of(
                 "gmail.com", GMAIL
