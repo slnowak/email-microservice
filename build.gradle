@@ -1,8 +1,23 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.github.jengelman.gradle.plugins:shadow:1.2.0'
+    }
+}
+
 apply plugin: 'java'
 apply plugin: 'groovy'
+apply plugin: 'application'
+apply plugin: 'com.github.johnrengelman.shadow'
 
 sourceCompatibility = 1.8
+targetCompatibility = 1.8
 version = '1.0'
+
+mainClassName = "com.novy.email.microservice.api.EmailSenderApplication"
 
 repositories {
     mavenCentral()
@@ -19,4 +34,22 @@ dependencies {
     compile 'org.apache.commons:commons-lang3:3.3.1'
     compile 'commons-validator:commons-validator:1.4.0'
     compile 'org.codemonkey.simplejavamail:simple-java-mail:2.1'
+
+    compile 'io.dropwizard:dropwizard-core:0.8.0-rc2'
+
+}
+
+run {
+    args 'server', './src/config/emailservice.yml'
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.1'
+}
+
+
+jar {
+    manifest {
+        attributes 'Main-Class': mainClassName
+    }
 }

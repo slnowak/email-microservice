@@ -1,6 +1,5 @@
-package com.novy.email.configuration
+package com.novy.email.microservice.sender.configuration
 
-import com.novy.email.microservice.sender.configuration.SupportedDomains
 import spock.lang.Specification
 
 /**

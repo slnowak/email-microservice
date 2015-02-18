@@ -3,6 +3,7 @@ package com.novy.email.microservice.sender.message;
 import com.google.common.base.Preconditions;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
+import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
@@ -12,6 +13,7 @@ import lombok.experimental.Accessors;
 
 @Accessors(fluent = true)
 @EqualsAndHashCode
+@ToString
 public class Message {
 
     private final EmailAddress recipient;
