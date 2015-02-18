@@ -32,6 +32,7 @@ public class SendEmailRequestBuilder {
     @Setter
     private String subject = "subject";
 
+    @Setter
     private String content = "content";
 
     public SendEmailRequestBuilder recipient(String recipient) {
